@@ -1,1 +1,3 @@
-console.log("hooray!");
+import startCamera from "./camera";
+
+startCamera();
