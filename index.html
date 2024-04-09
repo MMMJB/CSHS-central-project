@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSHS Central Event</title>
 
-    <script type="module" src="/src/main.ts" defer></script>
+    <script type="module" src="/src/main.js" defer></script>
+    <script type="module" src="/src/game.js" defer></script>
   </head>
   <body>
-    <video id="WEBCAM" width="500" height="500" autoplay></video>
+    <video id="WEBCAM" autoplay></video>
+    <canvas id="WEBCAM"></canvas>
+      <h1>Floppy Bird</h1>
+      <div class="score-container">
+        <div id="bestScore"></div>
+        <div id="currentScore"></div>
+      </div>  
+    <canvas id="canvas" width="431" height="768"></canvas>
   </body>
 </html>
