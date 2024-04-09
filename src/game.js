@@ -44,7 +44,7 @@ const setup = () => {
   flyHeight = height / 2 - size[1] / 2;
 
   // setup first 3 pipes
-  pipes = Array(3)
+  pipes = Array(8)
     .fill()
     .map((a, i) => [
       width + i * (pipeGap + pipeWidth * pipeSpacingMultiplier),
@@ -56,46 +56,21 @@ const render = () => {
   // make the pipe and bird moving
   index++;
 
-  // ctx.clearRect(0, 0, width, height);
+  ctx.clearRect(0, 0, width, height);
 
-  for (let i = 0; i < Math.ceil(width / 864); i++) {
+  for (let i = 0; i <= Math.ceil(width / 864); i++) {
     ctx.drawImage(
       img,
-      590,
+      589,
       0,
       864,
       768,
       -((index * (speed / 2)) % 864) + 864 * i,
       0,
-      864,
+      866,
       height
     );
   }
-
-  // // background first part
-  // ctx.drawImage(
-  //   img,
-  //   590,
-  //   0,
-  //   864,
-  //   768,
-  //   -((index * (speed / 2)) % width) + width,
-  //   0,
-  //   864,
-  //   height
-  // );
-  // // background second part
-  // ctx.drawImage(
-  //   img,
-  //   590,
-  //   0,
-  //   864,
-  //   768,
-  //   -(index * (speed / 2)) % width,
-  //   0,
-  //   864,
-  //   height
-  // );
 
   // pipe display
   if (gamePlaying) {
