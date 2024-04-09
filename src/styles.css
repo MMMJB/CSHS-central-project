@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 *,
 *::before,
@@ -15,13 +15,23 @@ body {
   place-items: center;
   margin: 0;
   text-align: center;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   user-select: none;
+  overflow: hidden;
 }
 
 header {
   margin: 0 auto;
   width: 431px;
+}
+
+#LOADER {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
 }
 
 video#WEBCAM {
@@ -37,17 +47,20 @@ canvas#WEBCAM {
   border-radius: 12px;
   position: fixed;
   inset: 24px;
+  object-fit: cover;
 }
 
 h1 {
-  background: url("https://i.ibb.co/Q9yv5Jk/flappy-bird-set.png") 0% 340px;
+  /* background: url("https://i.ibb.co/Q9yv5Jk/flappy-bird-set.png") 0% 340px; */
+  /* background-size: cover; */
   padding: 1.2rem 0;
   margin: 0;
 }
 
 .score-container {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 8px 6px;
-  background: #5EE270;
+  background: #5ee270;
 }
