@@ -4,7 +4,7 @@ const img = new Image();
 img.src = "/spritesheet.png";
 
 const width = window.innerWidth;
-const height = window.innerHeight - 100;
+const height = window.innerHeight - 70;
 canvas.width = width;
 canvas.height = height;
 
@@ -165,10 +165,10 @@ const render = () => {
     ctx.font = "bold 30px courier";
   }
 
-  document.getElementById("bestScore").innerHTML = `Best : ${bestScore}`;
-  document.getElementById(
-    "currentScore"
-  ).innerHTML = `Current : ${currentScore}`;
+  // document.getElementById("bestScore").innerHTML = `Best : ${bestScore}`;
+  document.getElementById("currentScore").innerHTML = gamePlaying
+    ? currentScore
+    : "";
 
   // tell the browser to perform anim
   window.requestAnimationFrame(render);

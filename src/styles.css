@@ -39,6 +39,7 @@ canvas#WEBCAM {
   position: fixed;
   inset: 24px;
   object-fit: cover;
+  z-index: 999;
 }
 
 h1 {
@@ -48,10 +49,15 @@ h1 {
   margin: 0;
 }
 
-.score-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 8px 6px;
-  background: #5ee270;
+#GAME {
+  position: relative;
+}
+
+#currentScore {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  color: white;
 }
