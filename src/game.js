@@ -160,8 +160,8 @@ const render = () => {
     flyHeight = height / 2 - size[1] / 2;
     // text accueil
     ctx.textAlign = "center";
-    ctx.fillText(`Best score : ${bestScore}`, width / 2, 245);
-    ctx.fillText("Click to play", width / 2, 535);
+    ctx.fillText(`Best score : ${bestScore}`, width / 2, height / 2 - 100);
+    ctx.fillText("Click to play", width / 2, height / 2 + 100);
     ctx.font = "bold 30px courier";
   }
 
